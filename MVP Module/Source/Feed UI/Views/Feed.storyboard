@@ -28,7 +28,7 @@
                                     </state>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <color key="backgroundColor" red="0.99951404330000004" green="0.41759261489999999" blue="0.4154433012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="H7a-Ro-5sz" firstAttribute="leading" secondItem="5DC-1d-SQX" secondAttribute="leading" id="MrE-Nr-ci5"/>
                                 <constraint firstItem="H7a-Ro-5sz" firstAttribute="top" secondItem="5DC-1d-SQX" secondAttribute="top" id="SdE-aZ-Bx0"/>
@@ -174,9 +174,6 @@ Location</string>
         <image name="pin" width="10" height="14"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
