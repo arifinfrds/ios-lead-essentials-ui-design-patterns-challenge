@@ -30,6 +30,6 @@ extension WeakRefVirtualProxy: FeedErrorView where T: FeedErrorView {
 	}
 
 	func hideErrorView() {
-		object?.hideErrorView()
+		object?.display(FeedErrorViewModel(message: .none))
 	}
 }
