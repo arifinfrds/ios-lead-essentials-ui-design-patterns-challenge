@@ -36,4 +36,8 @@ final class FeedViewModel {
 			}
 		}
 	}
+
+	func onErrorTapped() {
+		onErrorStateChange?(nil)
+	}
 }
