@@ -25,4 +25,8 @@ final class FeedLoaderPresentationAdapter: FeedViewControllerDelegate {
 			}
 		}
 	}
+
+	func didTapErrorView() {
+		presenter?.didTapErrorView()
+	}
 }

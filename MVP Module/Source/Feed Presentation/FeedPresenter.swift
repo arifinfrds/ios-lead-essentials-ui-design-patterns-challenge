@@ -46,4 +46,8 @@ final class FeedPresenter {
 		loadingView.display(FeedLoadingViewModel(isLoading: false))
 		feedErrorView.display(FeedErrorViewModel(message: Localized.Feed.loadError))
 	}
+
+	func didTapErrorView() {
+		feedErrorView.display(FeedErrorViewModel(message: .none))
+	}
 }
