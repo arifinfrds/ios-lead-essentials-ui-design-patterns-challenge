@@ -11,7 +11,7 @@ extension FeedViewController {
 	}
 
 	func simulateErrorViewTapped() {
-		didTapErrorViewButton()
+		errorView?.button.simulateTap()
 	}
 
 	@discardableResult
