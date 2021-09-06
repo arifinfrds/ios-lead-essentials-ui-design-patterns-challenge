@@ -4,7 +4,7 @@
 
 import FeedFeature
 
-final class FeedLoaderPresentationAdapter: FeedViewControllerDelegate {
+final class FeedLoaderPresentationAdapter: FeedViewControllerDelegate, ErrorViewDelegate {
 	private let feedLoader: FeedLoader
 	var presenter: FeedPresenter?
 
@@ -26,7 +26,7 @@ final class FeedLoaderPresentationAdapter: FeedViewControllerDelegate {
 		}
 	}
 
-	func didTapErrorView() {
+	func didDismissErrorView() {
 		presenter?.didTapErrorView()
 	}
 }

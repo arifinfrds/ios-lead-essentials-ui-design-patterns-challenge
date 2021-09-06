@@ -6,11 +6,15 @@ import UIKit
 
 protocol FeedViewControllerDelegate {
 	func didRequestFeedRefresh()
-	func didTapErrorView()
+}
+
+protocol ErrorViewDelegate {
+	func didDismissErrorView()
 }
 
 public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching, FeedLoadingView, FeedErrorView {
-	var delegate: FeedViewControllerDelegate?
+	var feedViewControllerDelegate: FeedViewControllerDelegate?
+	var errorViewDelegate: ErrorViewDelegate?
 
 	@IBOutlet private weak var errorView: ErrorView!
 
@@ -25,7 +29,7 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
 	}
 
 	@IBAction private func refresh() {
-		delegate?.didRequestFeedRefresh()
+		feedViewControllerDelegate?.didRequestFeedRefresh()
 	}
 
 	func display(_ viewModel: FeedLoadingViewModel) {
@@ -49,7 +53,7 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
 	}
 
 	@IBAction public func didTapErrorViewButton() {
-		delegate?.didTapErrorView()
+		errorViewDelegate?.didDismissErrorView()
 	}
 
 	public override func viewDidLayoutSubviews() {
