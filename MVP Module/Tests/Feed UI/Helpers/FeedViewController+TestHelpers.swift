@@ -10,7 +10,7 @@ extension FeedViewController {
 		refreshControl?.simulatePullToRefresh()
 	}
 
-	func simulateErrorViewTapped() {
+	func simulateTapOnErrorMessage() {
 		errorView?.button.simulateTap()
 	}
 
