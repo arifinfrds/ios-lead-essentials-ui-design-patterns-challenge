@@ -22,7 +22,6 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
 		super.viewDidLoad()
 
 		refresh()
-		configureErrorViewTap()
 	}
 
 	@IBAction private func refresh() {
@@ -49,11 +48,7 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
 		errorView.show(message: errorMessage)
 	}
 
-	private func configureErrorViewTap() {
-		errorView.button.addTarget(self, action: #selector(didTapErrorViewButton), for: .touchUpInside)
-	}
-
-	@objc public func didTapErrorViewButton() {
+	@IBAction public func didTapErrorViewButton() {
 		delegate?.didTapErrorView()
 	}
 
