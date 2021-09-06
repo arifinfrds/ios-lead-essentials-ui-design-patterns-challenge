@@ -37,7 +37,7 @@ final class FeedViewModel {
 		}
 	}
 
-	func onErrorTapped() {
+	func dismissError() {
 		onErrorStateChange?(nil)
 	}
 }

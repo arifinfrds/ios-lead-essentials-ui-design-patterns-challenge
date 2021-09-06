@@ -44,7 +44,7 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
 	}
 
 	@IBAction public func didTapErrorViewButton() {
-		viewModel?.onErrorTapped()
+		viewModel?.dismissError()
 	}
 
 	public override func viewDidLayoutSubviews() {
